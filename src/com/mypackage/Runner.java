@@ -9,7 +9,7 @@ public class Runner {
 
 		GameSetup setup = new GameSetup();
 
-		List<Integer> startList = new ArrayList(setup.createRandomStartList());
+		List<Integer> startList = new ArrayList<Integer>(setup.createRandomStartList());
 
 		System.out.println(setup.generateColumns(startList));
 

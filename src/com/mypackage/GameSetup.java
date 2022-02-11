@@ -26,9 +26,9 @@ public class GameSetup {
 		return startList;
 	}
 
-	public List<List> generateColumns(List list) {
+	public List<List<Integer>> generateColumns(List<Integer> list) {
 
-		List<List> listOfLists = new ArrayList<>();
+		List<List<Integer>> listOfLists = new ArrayList<>();
 
 		columnA = list.subList(0, 3);
 		columnB = list.subList(3, 6);
