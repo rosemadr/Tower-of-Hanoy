@@ -4,12 +4,21 @@ import java.util.Scanner;
 
 public class UserInterface {
 
+<<<<<<< Updated upstream
 	private Game game = new Game();
 
 	public UserInterface(Game game) {
 		super();
 		this.game = game;
 	}
+=======
+//	private Game game = new Game();
+//
+//	public UserInterface(Game game) {
+//		super();
+//		this.game = game;
+//	}
+>>>>>>> Stashed changes
 
 	public String introduction() {
 		System.out.println("Welcome to the Tower of Hannoy\nWould like to play the game?<yes/no>\n");
