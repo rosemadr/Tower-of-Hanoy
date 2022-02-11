@@ -10,6 +10,10 @@ public class Game {
 	private List<Integer> columnB = new ArrayList<>();
 	private List<Integer> columnC = new ArrayList<>();
 
+	public Game() {
+		super();
+	}
+
 	@Override
 	public String toString() {
 		return "A: " + columnA + "\nB: " + columnB + "\nC: " + columnC;
