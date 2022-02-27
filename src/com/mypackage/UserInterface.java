@@ -13,7 +13,11 @@ public class UserInterface {
 		System.out.println("Welcome to the Tower of Hannoy\nWould like to play the game?<y/n>\n"); // TODO change to
 																									// y/n
 		Scanner input = new Scanner(System.in);
-		return input.nextLine();
+		try {
+			return input.nextLine();
+		} finally {
+			input.close();
+		}
 	}
 
 //	public void printGameBoard() {
@@ -23,21 +27,36 @@ public class UserInterface {
 	public String selectCard() {
 		System.out.println("Select the column from which you would like to move a card: <A/B/C>\n");
 		Scanner input = new Scanner(System.in);
-		return input.nextLine();
+
+		try {
+			return input.nextLine();
+		} finally {
+			input.close();
+		}
 
 	}
 
 	public String placeCard(int cardNum) {
 		System.out.println("Select the column where you would like to place that " + cardNum + ": <A/B/C>\n");
 		Scanner input = new Scanner(System.in);
-		return input.nextLine();
+
+		try {
+			return input.nextLine();
+		} finally {
+			input.close();
+		}
 
 	}
 
 	public String rulesOption() {
 		System.out.println("Type <R> to see the rules again.\n");
 		Scanner input = new Scanner(System.in);
-		return input.nextLine();
+
+		try {
+			return input.nextLine();
+		} finally {
+			input.close();
+		}
 	}
 
 	public void printRules() {
