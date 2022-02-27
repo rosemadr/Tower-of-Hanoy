@@ -49,11 +49,11 @@ public class GameController {
 		String moveFrom = ui.selectCard().toUpperCase();
 		int cardToMove = game.topCard(moveFrom);
 		String moveTo = ui.placeCard(cardToMove);
-		
-		
-		move.moveCard(game.getGameBoard(), , )
-				
-		}
+
+		int firstColumn = convertInput(moveFrom);
+		int secondColumn = convertInput(moveTo);
+
+		move.moveCard(game.getGameBoard(), firstColumn, secondColumn);
 
 	}
 
