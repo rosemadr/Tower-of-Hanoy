@@ -6,7 +6,7 @@ public class GameController {
 
 	private Game game = new Game();
 	private GameSetup setup = new GameSetup();
-	private MovementLogic move = new MovementLogic();
+	private MovementLogic move = new MovementLogic(game);
 	private UserInterface ui = new UserInterface();
 
 	public GameController(Game game, GameSetup setup, MovementLogic move, UserInterface ui) {

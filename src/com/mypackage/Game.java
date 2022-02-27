@@ -34,7 +34,19 @@ public class Game {
 		}
 		int cardNum = column.get(column.size() - 1);
 		return cardNum;
+	}
 
+	public List<List<Integer>> packageColumns(List<Integer> columnA, List<Integer> columnB, List<Integer> columnC) {
+		List<List<Integer>> listOfLists = new ArrayList<>();
+		listOfLists.add(columnA);
+		listOfLists.add(columnB);
+		listOfLists.add(columnC);
+		return listOfLists;
+	}
+
+	public List<Integer> unpackColumn(List<List<Integer>> allLists, int i) {
+		List<Integer> column = new ArrayList<Integer>(allLists.get(i));
+		return column;
 	}
 
 	@Override
@@ -70,11 +82,16 @@ public class Game {
 		return gameBoard;
 	}
 
-	public void setGameBoard(List<Integer> columnA, List<Integer> columnB, List<Integer> columnC) {
-		this.gameBoard.add(columnA);
-		this.gameBoard.add(columnB);
-		this.gameBoard.add(columnC);
+	public void setGameBoard(List<List<Integer>> gameBoard) {
+		setColumnA(unpackColumn(gameBoard, 0));
+		setColumnB(unpackColumn(gameBoard, 1));
+		setColumnC(unpackColumn(gameBoard, 2));
+		this.gameBoard = gameBoard;
 
 	}
 
+	public void setGameBoard(List<Integer> columnA, List<Integer> columnB, List<Integer> columnC) {
+		this.gameBoard = packageColumns(columnA, columnB, columnC);
+
+	}
 }

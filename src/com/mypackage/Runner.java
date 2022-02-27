@@ -1,23 +1,24 @@
 package com.mypackage;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Runner {
 
 	public static void main(String[] args) throws InvalidMoveException {
 
+		Game game = new Game();
+
 		GameSetup setup = new GameSetup();
 
-		MovementLogic move = new MovementLogic();
+		MovementLogic move = new MovementLogic(game);
 
-		List<Integer> startList = new ArrayList<Integer>(setup.createRandomStartList());
+		UserInterface ui = new UserInterface();
 
-		List<List<Integer>> newList = new ArrayList<>(setup.generateColumns(startList));
+		GameController play = new GameController(game, setup, move, ui);
 
-		List<List<Integer>> gameList = newList;
+//		List<Integer> startList = new ArrayList<Integer>(setup.createRandomStartList());
 
-		System.out.println(gameList);
+		play.play();
+
+		play.playMove();
 
 		// System.out.println(move.unpackList(newList, 0));
 

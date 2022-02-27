@@ -10,8 +10,8 @@ public class UserInterface {
 	}
 
 	public String introduction() {
-		System.out.println("Welcome to the Tower of Hannoy\nWould like to play the game?<yes/no>\n"); // TODO change to
-																										// y/n
+		System.out.println("Welcome to the Tower of Hannoy\nWould like to play the game?<y/n>\n"); // TODO change to
+																									// y/n
 		Scanner input = new Scanner(System.in);
 		return input.nextLine();
 	}
