@@ -21,25 +21,45 @@ public class GameController {
 		System.out.println(game.toString() + "\n");
 	}
 
-	public void convertInput(String input) {
-		// add upper   String = input;
-		switch ("A")
+	public int convertInput(String input) {
+		String inputUpper = input.toUpperCase();
+		int columnNum;
+		switch (inputUpper) {
+
+		case "A":
+			columnNum = 1;
+			break;
+
+		case "B":
+			columnNum = 2;
+			break;
+
+		case "C":
+			columnNum = 3;
+			break;
+
+		default:
+			break;
+		}
+		return columnNum;
+
 	}
 
 	public void playMove() {
 		String moveFrom = ui.selectCard().toUpperCase();
-		String moveTo = ui.placeCard()
-
-{
-			case "A":
+		int cardToMove = game.topCard(moveFrom);
+		String moveTo = ui.placeCard(cardToMove);
+		
+		
+		move.moveCard(game.getGameBoard(), , )
 				
 		}
-		
+
 	}
 
 	public void play() {
 
-		if (ui.introduction().toLowerCase().equals("yes")) {
+		if (ui.introduction().toLowerCase().equals("y")) {
 
 			ui.printRules();
 
