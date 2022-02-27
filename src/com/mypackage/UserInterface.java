@@ -4,15 +4,14 @@ import java.util.Scanner;
 
 public class UserInterface {
 
-	private Game game = new Game();
-
-	public UserInterface(Game game) {
+	public UserInterface() {
 		super();
-		this.game = game;
+
 	}
 
 	public String introduction() {
-		System.out.println("Welcome to the Tower of Hannoy\nWould like to play the game?<yes/no>\n");
+		System.out.println("Welcome to the Tower of Hannoy\nWould like to play the game?<yes/no>\n"); // TODO change to
+																										// y/n
 		Scanner input = new Scanner(System.in);
 		return input.nextLine();
 	}

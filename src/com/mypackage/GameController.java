@@ -9,7 +9,7 @@ public class GameController {
 	private MovementLogic move = new MovementLogic();
 	private UserInterface ui = new UserInterface();
 
-	public GameController() {
+	public GameController(Game game, GameSetup setup, MovementLogic move, UserInterface ui) {
 		super();
 		this.game = game;
 		this.setup = setup;
@@ -23,7 +23,7 @@ public class GameController {
 
 	public int convertInput(String input) {
 		String inputUpper = input.toUpperCase();
-		int columnNum;
+		int columnNum = 0;
 		switch (inputUpper) {
 
 		case "A":
@@ -45,7 +45,7 @@ public class GameController {
 
 	}
 
-	public void playMove() {
+	public void playMove() throws InvalidMoveException {
 		String moveFrom = ui.selectCard().toUpperCase();
 		int cardToMove = game.topCard(moveFrom);
 		String moveTo = ui.placeCard(cardToMove);
