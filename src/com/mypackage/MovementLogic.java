@@ -26,10 +26,6 @@ public class MovementLogic {
 		this.game = game;
 	}
 
-	public boolean isListEmpty(List<List<Integer>> allLists, int listNum) {
-		return game.unpackColumn(allLists, listNum).isEmpty();
-	}
-
 	public List<List<Integer>> moveCard(List<List<Integer>> allLists, int moveFrom, int moveTo)
 			throws InvalidMoveException {
 
