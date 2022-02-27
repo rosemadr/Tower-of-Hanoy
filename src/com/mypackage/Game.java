@@ -14,6 +14,29 @@ public class Game {
 		super();
 	}
 
+	public int topCard(String columnLetter) {
+		List<Integer> column = null;
+		switch (columnLetter.toUpperCase()) {
+		case "A":
+			column = columnA;
+			break;
+
+		case "B":
+			column = columnB;
+			break;
+
+		case "C":
+			column = columnC;
+			break;
+
+		default:
+			break;
+		}
+		int cardNum = column.get(column.size() - 1);
+		return cardNum;
+
+	}
+
 	@Override
 	public String toString() {
 		return "A: " + columnA + "\nB: " + columnB + "\nC: " + columnC;
