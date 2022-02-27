@@ -1,5 +1,6 @@
 package com.mypackage;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class GameController {
@@ -57,7 +58,7 @@ public class GameController {
 
 	}
 
-	public void play() {
+	public void play() throws InvalidMoveException {
 
 		if (ui.introduction().toLowerCase().equals("y")) {
 
@@ -68,9 +69,44 @@ public class GameController {
 
 			printBoard();
 
+			do {
+
+				playMove();
+
+				System.out.println(game.getGameBoard());
+
+				ui.rulesOption();
+
+			} while (stillPlaying() == true);
+
+			ui.printWin();
+
 			// begin moves
 
 		}
 
 	}
+
+//	public boolean isListEmpty(List<Integer> column) {
+//		return column.isEmpty();
+//	}
+
+	public boolean stillPlaying() {
+		List<List<Integer>> gameBoard = game.getGameBoard();
+
+		List<Integer> winningList = new ArrayList<Integer>();
+
+		for (int i = 9; i > 0; i--) {
+			winningList.add(i);
+		}
+
+		for (List<Integer> c : gameBoard) {
+
+			if (c.equals(winningList)) {
+				return false;
+			}
+		}
+		return true;
+	}
+
 }
