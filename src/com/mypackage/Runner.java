@@ -18,8 +18,6 @@ public class Runner {
 
 		play.play();
 
-		play.playMove();
-
 		// System.out.println(move.unpackList(newList, 0));
 
 		// System.out.println(move.moveCard(gameList, 0, 0));
