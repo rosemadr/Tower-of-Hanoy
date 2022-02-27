@@ -16,14 +16,12 @@ public class Runner {
 		List<List<Integer>> newList = new ArrayList<>(setup.generateColumns(startList));
 
 		List<List<Integer>> gameList = newList;
-		
+
 		System.out.println(gameList);
-		
-		
 
 		// System.out.println(move.unpackList(newList, 0));
 
-		System.out.println(move.moveCard(gameList, 0, 0));
+		// System.out.println(move.moveCard(gameList, 0, 0));
 
 	}
 

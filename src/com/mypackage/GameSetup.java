@@ -42,4 +42,6 @@ public class GameSetup {
 
 	}
 
+	// TODO make this all amount to one function to be called
+
 }

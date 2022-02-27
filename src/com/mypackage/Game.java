@@ -70,8 +70,11 @@ public class Game {
 		return gameBoard;
 	}
 
-	public void setGameBoard(List<List<Integer>> gameBoard) {
-		this.gameBoard = gameBoard;
+	public void setGameBoard(List<Integer> columnA, List<Integer> columnB, List<Integer> columnC) {
+		this.gameBoard.add(columnA);
+		this.gameBoard.add(columnB);
+		this.gameBoard.add(columnC);
+
 	}
 
 }
