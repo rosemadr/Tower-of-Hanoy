@@ -29,7 +29,7 @@ public class UserInterface {
 		Scanner input = new Scanner(System.in);
 
 		try {
-			return input.nextLine();
+			return input.nextLine(); // add if statement so input cannot be null? TODO
 		} finally {
 			input.close();
 		}
