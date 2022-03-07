@@ -23,6 +23,12 @@ public class UserInterface {
 //	public void printGameBoard() {
 //		System.out.println(game.getGameBoard());
 //	}
+	public String[] getMove() {
+		String[] moveList = new String[2];
+		moveList[0] = selectCard();
+		moveList[1] = placeCard();
+		return moveList;
+	}
 
 	public String selectCard() {
 		System.out.println("Select the column from which you would like to move a card: <A/B/C>\n");
@@ -36,8 +42,8 @@ public class UserInterface {
 
 	}
 
-	public String placeCard(int cardNum) {
-		System.out.println("Select the column where you would like to place that " + cardNum + ": <A/B/C>\n");
+	public String placeCard() {
+		System.out.println("Select the column where you would like to place that card: <A/B/C>\n");
 		Scanner input = new Scanner(System.in);
 
 		try {

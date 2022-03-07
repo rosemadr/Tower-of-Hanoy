@@ -47,9 +47,11 @@ public class GameController {
 	}
 
 	public void playMove() throws InvalidMoveException {
-		String moveFrom = ui.selectCard().toUpperCase();
-		int cardToMove = game.topCard(moveFrom);
-		String moveTo = ui.placeCard(cardToMove);
+		String[] turn = ui.getMove();
+
+		String moveFrom = turn[0].toUpperCase();
+
+		String moveTo = turn[1].toUpperCase();
 
 		int firstColumn = convertInput(moveFrom);
 		int secondColumn = convertInput(moveTo);
